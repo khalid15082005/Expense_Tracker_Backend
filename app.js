@@ -85,11 +85,11 @@ app.put("/api/expenses/:id",async(req,res)=>{
         },
     );
 
-    app.delete("/api/expenses/:id",async(req,res)=>{
-        const {id} = req.params;
-        const deletedExpense = await expenseModel.findOneAndDelete({id:id});
-        res.status(200).json(deletedExpense);
-    });    
+    // app.delete("/api/expenses/:id",async(req,res)=>{
+    //     const {id} = req.params;
+    //     const deletedExpense = await expenseModel.findOneAndDelete({id:id});
+    //     res.status(200).json(deletedExpense);
+    // });    
         
     res.status(200).json(updatedExpense);
 })
